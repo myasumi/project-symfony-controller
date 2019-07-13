@@ -28,11 +28,12 @@ class ContactController extends AbstractController
                 ->from('miguel.cabello.unas@gmail.com')
                 ->to($contact->getEmail())
                 ->subject($contact->getSubject())
-                ->text('Message test, hello world');
+                ->text($contact->getMessage());
             $mailer->send($email);
 
             $manager->persist($contact);
             $manager->flush();
+            return $this->redirectToRoute('security_contact');
         }
         return $this->render('contact/contact.html.twig', [
             'form' => $form->createView(),

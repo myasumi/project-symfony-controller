@@ -5,12 +5,12 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Contact
+ * Faculty
  *
- * @ORM\Table(name="contact")
+ * @ORM\Table(name="faculty")
  * @ORM\Entity
  */
-class Contact
+class Faculty
 {
     /**
      * @var int
@@ -31,23 +31,23 @@ class Contact
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     * @ORM\Column(name="acronym", type="string", length=55, nullable=false)
      */
-    private $email;
+    private $acronym;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="message", type="string", length=255, nullable=false)
+     * @ORM\Column(name="vision", type="string", length=255, nullable=false)
      */
-    private $message;
+    private $vision;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="subject", type="string", length=255, nullable=false)
+     * @ORM\Column(name="mission", type="string", length=255, nullable=false)
      */
-    private $subject;
+    private $mission;
 
     public function getId(): ?int
     {
@@ -66,38 +66,38 @@ class Contact
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getAcronym(): ?string
     {
-        return $this->email;
+        return $this->acronym;
     }
 
-    public function setEmail(string $email): self
+    public function setAcronym(string $acronym): self
     {
-        $this->email = $email;
+        $this->acronym = $acronym;
 
         return $this;
     }
 
-    public function getMessage(): ?string
+    public function getVision(): ?string
     {
-        return $this->message;
+        return $this->vision;
     }
 
-    public function setMessage(string $message): self
+    public function setVision(string $vision): self
     {
-        $this->message = $message;
+        $this->vision = $vision;
 
         return $this;
     }
 
-    public function getSubject(): ?string
+    public function getMission(): ?string
     {
-        return $this->subject;
+        return $this->mission;
     }
 
-    public function setSubject(string $subject): self
+    public function setMission(string $mission): self
     {
-        $this->subject = $subject;
+        $this->mission = $mission;
 
         return $this;
     }
