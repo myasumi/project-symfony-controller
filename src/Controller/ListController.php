@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Course;
 use App\Entity\Departament;
 use App\Entity\Faculty;
 use App\Entity\School;
@@ -71,4 +72,17 @@ class ListController extends AbstractController
             'teachers' => $teacher,
         ]);
     }
+
+    /**
+     * @Route("/list_course", name="security_list_course")
+     */
+    public function actionListCourse()
+    {
+        $course_repo = $this->getDoctrine()->getRepository(Course::class);
+        $course = $course_repo->findAll();
+        return $this->render('list/course.html.twig', [
+            'courses' => $course,
+        ]);
+    }
+
 }
