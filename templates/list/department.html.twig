@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Security - List - Department{% endblock %}
+
+{% block body %}
+
+    <!-- list department -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div>
+                <a class="btn btn-success" href="#">New<i class="fa fa-plus"></i></a>
+            </div>
+            <br>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Acronym</th>
+                    <th>Mission</th>
+                    <th>Vision</th>
+                    <th>Faculty</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+                </thead>
+
+                <thead>
+                {% for department in departments %}
+                <tbody>
+                <tr>
+                    <td>{{ department.firstname }}</td>
+                    <td>{{ department.acronym }}</td>
+                    <td>{{ department.mission }}</td>
+                    <td>{{ department.vision }}</td>
+                    <td>{{ department.idFacultad }}</td>
+                    <td>
+                        <a class="btn btn-warning" href="#">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="#">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+                {% endfor %}
+                </thead>
+            </table>
+        </div>
+    </section>
+    <!-- /list department -->
+{% endblock %}

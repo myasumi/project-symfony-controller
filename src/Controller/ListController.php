@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Departament;
 use App\Entity\Faculty;
 use App\Entity\School;
 use App\Entity\Users;
@@ -43,6 +44,18 @@ class ListController extends AbstractController
         $school = $school_repo->findAll();
         return $this->render('list/school.html.twig', [
             'schools' => $school,
+        ]);
+    }
+
+    /**
+     * @Route("/list_department", name="security_list_department")
+     */
+    public function actionListDepartment()
+    {
+        $department_repo = $this->getDoctrine()->getRepository(Departament::class);
+        $department = $department_repo->findAll();
+        return $this->render('list/department.html.twig', [
+            'departments' => $department,
         ]);
     }
 }
