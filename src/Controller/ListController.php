@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Faculty;
+use App\Entity\School;
 use App\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -30,6 +31,18 @@ class ListController extends AbstractController
         $faculty = $faculty_repo->findAll();
         return $this->render('list/faculty.html.twig', [
             'faculties' => $faculty,
+        ]);
+    }
+
+    /**
+     * @Route("/list_school", name="security_list_school")
+     */
+    public function toListSchool()
+    {
+        $school_repo = $this->getDoctrine()->getRepository(School::class);
+        $school = $school_repo->findAll();
+        return $this->render('list/school.html.twig', [
+            'schools' => $school,
         ]);
     }
 }

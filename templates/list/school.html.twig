@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <!-- list faculty -->
+    <!-- list school -->
     <section class="section bg-gray">
         <div class="container">
             <div>
@@ -14,22 +14,20 @@
             <table class="table table-hover">
                 <thead class="thead-light">
                 <tr>
-                    <th>Name</th>
-                    <th>Acronym</th>
-                    <th>Mission</th>
-                    <th>Vision</th>
+                    <th>First name</th>
+                    <th>Curriculum</th>
+                    <th>Faculty</th>
                     <th colspan="2">Actions</th>
                 </tr>
                 </thead>
 
                 <thead>
-                {% for faculty in faculties %}
+                {% for school in schools %}
                 <tbody>
                 <tr>
-                    <td>{{ faculty.name }}</td>
-                    <td>{{ faculty.acronym }}</td>
-                    <td>{{ faculty.mission }}</td>
-                    <td>{{ faculty.vision }}</td>
+                    <td>{{ school.firstname }}</td>
+                    <td>{{ school.curriculum }}</td>
+                    <td>{{ school.idFacultad }}</td>
                     <td>
                         <a class="btn btn-warning" href="#">Edit</a>
                     </td>
@@ -43,5 +41,5 @@
             </table>
         </div>
     </section>
-    <!-- /list faculty -->
+    <!-- /list school -->
 {% endblock %}
