@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Form - Contact{% endblock %}
+
+{% block body %}
+    <div class="col-xl-9 justify-content-center align-content-xl-center">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Send" class="btn btn-success"/>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
