@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Faculty;
+use App\Entity\School;
 use App\Entity\Users;
 use App\Form\FacultyType;
+use App\Form\SchoolType;
 use App\Form\UserType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -51,4 +53,23 @@ class RegisterController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    /**
+     * @Route("/register_school", name="security_register_school")
+     */
+    public function actionFormRegisterSchool(Request $request, ObjectManager $manager)
+    {
+        $school = new School();
+        $form = $this->createForm(SchoolType::class, $school);
+        $form->handleRequest( $request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $manager->persist($school);
+            $manager->flush();
+            return $this->redirectToRoute('security_register_school');
+        }
+        return $this->render('register/school.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
 }
