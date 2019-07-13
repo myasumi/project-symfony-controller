@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Security - List - Faculty{% endblock %}
+
+{% block body %}
+
+    <!-- list faculty -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div>
+                <a class="btn btn-success" href="#">New<i class="fa fa-plus"></i></a>
+            </div>
+            <br>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Acronym</th>
+                    <th>Username</th>
+                    <th>Type User</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+                </thead>
+
+                <thead>
+                {% for user in users %}
+                <tbody>
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.surname }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        <a class="btn btn-warning" href="#">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="#">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+                {% endfor %}
+                </thead>
+            </table>
+        </div>
+    </section>
+    <!-- /list faculty -->
+{% endblock %}

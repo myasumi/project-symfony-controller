@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Course;
 use App\Entity\Departament;
 use App\Entity\Faculty;
 use App\Entity\School;
 use App\Entity\Teacher;
 use App\Entity\Users;
+use App\Form\CourseType;
 use App\Form\DepartmentType;
 use App\Form\FacultyType;
 use App\Form\SchoolType;
@@ -108,6 +110,24 @@ class RegisterController extends AbstractController
             return $this->redirectToRoute('security_register_teacher');
         }
         return $this->render('register/teacher.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/register_course", name="security_register_course")
+     */
+    public function actionFormRegisterCourse(Request $request, ObjectManager $manager)
+    {
+        $course = new Course();
+        $form = $this->createForm(CourseType::class, $course);
+        $form->handleRequest( $request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $manager->persist($course);
+            $manager->flush();
+            return $this->redirectToRoute('security_register_course');
+        }
+        return $this->render('register/course.html.twig', [
             'form' => $form->createView(),
         ]);
     }

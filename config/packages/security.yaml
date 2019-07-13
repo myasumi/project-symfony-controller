@@ -1,6 +1,15 @@
 security:
+    encoders:
+        App\Entity\Users:
+            algorithm: bcrypt
+            cost: 4
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
+        in_database:
+            entity:
+                class: App\Entity\User
+                #to authenticate username
+                property: username
         in_memory: { memory: ~ }
     firewalls:
         dev:
