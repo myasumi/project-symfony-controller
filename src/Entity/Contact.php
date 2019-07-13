@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -17,21 +18,30 @@ class Contact
     private $id;
 
     /**
+     * @Assert\NotBlank(message="el campo es obligatorio, ingrese un dato")
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
+     * @Assert\NotBlank(message="el campo es obligatorio, ingrese un dato")
+     * @Assert\Email(
+     *     message = "el correo no es valido debe incluir el simbolo @",
+     *     checkMX = true
+     * )
      * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
+     * @Assert\Length(min="8")
+     * @Assert\NotBlank(message="el campo es obligatorio, ingrese un dato")
      * @ORM\Column(type="string", length=255)
      */
     private $message;
 
     /**
+     * @Assert\NotBlank(message="el campo es obligatorio, ingrese un dato")
      * @ORM\Column(type="string", length=255)
      */
     private $subject;
