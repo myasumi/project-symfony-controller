@@ -3,20 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Users
  *
  * @ORM\Table(name="users", indexes={@ORM\Index(name="fk_users_role", columns={"role_id"})})
  * @ORM\Entity
- * @UniqueEntity(
- * fields= {"name"},
- * message= "el usuario que indicaste ya existe!"
- * )
  */
-class Users implements UserInterface
+class Users
 {
     /**
      * @var int
@@ -30,16 +24,12 @@ class Users implements UserInterface
     /**
      * @var string
      *
-     *
-     *
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 
     /**
      * @var string
-     *
-     *
      *
      * @ORM\Column(name="surname", type="string", length=255, nullable=false)
      */
@@ -48,8 +38,6 @@ class Users implements UserInterface
     /**
      * @var string
      *
-     *
-     *
      * @ORM\Column(name="username", type="string", length=150, nullable=false)
      */
     private $username;
@@ -57,13 +45,9 @@ class Users implements UserInterface
     /**
      * @var string
      *
-     *
-     *
      * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
     private $password;
-
-
 
     /**
      * @var \Roles
@@ -140,19 +124,5 @@ class Users implements UserInterface
         return $this;
     }
 
-    public function eraseCredentials()
-    {
-    }
-    public function getSalt()
-    {
-    }
-    public function getRoles()
-    {
-        return array('ROLE_USER');
-    }
-    function __toString()
-    {
-        return $this->firstname.' '.$this->surname;
-    }
 
 }
