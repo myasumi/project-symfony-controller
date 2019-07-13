@@ -1,0 +1,160 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page | Principal{% endblock %}
+
+{% block body %}
+    <!-- header -->
+    {{ include('header/header.html.twig') }}
+    <!-- /header -->
+
+    <!-- hero slider -->
+    <section class="hero-section overlay bg-cover" data-background="educenter/images/banner/banner-1.jpg">
+        <div class="container">
+            <div class="hero-slider">
+                <!-- slider item -->
+                <div class="hero-slider-item">
+                    <h2 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Bienvenidos al Departamento Académico de Ciencias Exáctas</h2>
+                    <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">El Departamento Académico de Ciencias Exactas es una unidad de servicio académico que reúne a docentes que cultivan las disciplinas de matemática y estadística, está adscrito a la Facultad de Ingeniería en Informática y Sistemas de la Universidad Nacional Agraria de la Selva.</p>
+                    <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
+                </div>
+                <!-- slider item -->
+                <div class="hero-slider-item">
+                    <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Your bright future is our mission</h1>
+                    <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+                    <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
+                </div>
+                <!-- slider item -->
+                <div class="hero-slider-item">
+                    <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Your bright future is our mission</h1>
+                    <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+                    <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /hero slider -->
+
+    <!-- banner-feature -->
+    <section class="bg-gray">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-4 col-lg-5 align-self-end">
+                    <img class="img-fluid w-100" src="educenter/images/banner/banner-feature.png" alt="banner-feature">
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    <div class="row feature-blocks bg-gray justify-content-between">
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Scholorship News</h3>
+                            <p  style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Notice Board</h3>
+                            <p  style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Achievements</h3>
+                            <p  style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="ti-write mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Admission Now</h3>
+                            <p  style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /banner-feature -->
+
+    <!-- blog -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Latest News</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="educenter/images/blog/post-1.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">August 28, 2019</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">By Jonathon</li>
+                            </ul>
+                            <a href="blog-single.html">
+                                <h4 class="card-title">The Expenses You Are Thinking.</h4>
+                            </a>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+                            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="educenter/images/blog/post-2.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">August 13, 2019</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">By Jonathon Drew</li>
+                            </ul>
+                            <a href="blog-single.html">
+                                <h4 class="card-title">Tips to Succeed in an Online Course</h4>
+                            </a>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+                            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="educenter/images/blog/post-3.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">August 24, 2018</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">By Alex Pitt</li>
+                            </ul>
+                            <a href="blog-single.html">
+                                <h4 class="card-title">Orientation Program for the new students</h4>
+                            </a>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+                            <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- /blog -->
+
+    <!-- footer -->
+    {{ include('footer/footer.html.twig') }}
+    <!-- /footer -->
+{% endblock %}
