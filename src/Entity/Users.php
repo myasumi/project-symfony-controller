@@ -3,14 +3,21 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Users
  *
  * @ORM\Table(name="users", indexes={@ORM\Index(name="fk_users_role", columns={"role_id"})})
  * @ORM\Entity
+ * @UniqueEntity(
+ * fields= {"username"},
+ * message= "el usuario que indicaste ya existe!"
+ * )
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @var int
@@ -48,6 +55,12 @@ class Users
      * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password")
+     * @Assert\NotBlank()
+     */
+    public $conf_password;
 
     /**
      * @var \Roles
@@ -122,6 +135,21 @@ class Users
         $this->role = $role;
 
         return $this;
+    }
+
+    public function eraseCredentials()
+    {
+    }
+    public function getSalt()
+    {
+    }
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+    function __toString()
+    {
+        return $this->name.' '.$this->surname;
     }
 
 

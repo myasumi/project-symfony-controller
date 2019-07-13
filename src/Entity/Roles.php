@@ -45,5 +45,10 @@ class Roles
         return $this;
     }
 
+    function __toString()
+    {
+        return $this->name;
+    }
+
 
 }
