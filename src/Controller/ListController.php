@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Departament;
 use App\Entity\Faculty;
 use App\Entity\School;
+use App\Entity\Teacher;
 use App\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -56,6 +57,18 @@ class ListController extends AbstractController
         $department = $department_repo->findAll();
         return $this->render('list/department.html.twig', [
             'departments' => $department,
+        ]);
+    }
+
+    /**
+     * @Route("/list_teacher", name="security_list_teacher")
+     */
+    public function actionListTeacher()
+    {
+        $teacher_repo = $this->getDoctrine()->getRepository(Teacher::class);
+        $teacher = $teacher_repo->findAll();
+        return $this->render('list/teacher.html.twig', [
+            'teachers' => $teacher,
         ]);
     }
 }

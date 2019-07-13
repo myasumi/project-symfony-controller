@@ -14,7 +14,7 @@
             <table class="table table-hover">
                 <thead class="thead-light">
                 <tr>
-                    <th>First name</th>
+                    <th>Name</th>
                     <th>Curriculum</th>
                     <th>Faculty</th>
                     <th colspan="2">Actions</th>
@@ -25,9 +25,9 @@
                 {% for school in schools %}
                 <tbody>
                 <tr>
-                    <td>{{ school.firstname }}</td>
+                    <td>{{ school.name }}</td>
                     <td>{{ school.curriculum }}</td>
-                    <td>{{ school.idFacultad }}</td>
+                    <td>{{ school.faculty }}</td>
                     <td>
                         <a class="btn btn-warning" href="#">Edit</a>
                     </td>

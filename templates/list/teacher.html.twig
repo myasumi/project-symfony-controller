@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Security - List - Department{% endblock %}
+{% block title %}Security - List - Teacher{% endblock %}
 
 {% block body %}
 
-    <!-- list department -->
+    <!-- list teacher -->
     <section class="section bg-gray">
         <div class="container">
             <div>
@@ -14,24 +14,24 @@
             <table class="table table-hover">
                 <thead class="thead-light">
                 <tr>
-                    <th>Name</th>
-                    <th>Acronym</th>
-                    <th>Mission</th>
-                    <th>Vision</th>
-                    <th>Faculty</th>
+                    <th>Condition</th>
+                    <th>Category</th>
+                    <th>Code</th>
+                    <th>Department</th>
+                    <th>User</th>
                     <th colspan="2">Actions</th>
                 </tr>
                 </thead>
 
                 <thead>
-                {% for department in departments %}
+                {% for teacher in teachers %}
                 <tbody>
                 <tr>
-                    <td>{{ department.firstname }}</td>
-                    <td>{{ department.acronym }}</td>
-                    <td>{{ department.mission }}</td>
-                    <td>{{ department.vision }}</td>
-                    <td>{{ department.faculty }}</td>
+                    <td>{{ teacher.condicion }}</td>
+                    <td>{{ teacher.categoria }}</td>
+                    <td>{{ teacher.codigo }}</td>
+                    <td>{{ teacher.department }}</td>
+                    <td>{{ teacher.users }}</td>
                     <td>
                         <a class="btn btn-warning" href="#">Edit</a>
                     </td>
@@ -45,5 +45,5 @@
             </table>
         </div>
     </section>
-    <!-- /list department -->
+    <!-- /list teacher -->
 {% endblock %}
