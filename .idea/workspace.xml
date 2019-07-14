@@ -33,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/register/teacher.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="615">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -67,7 +67,6 @@
         <option value="$PROJECT_DIR$/src/Entity/Roles.php" />
         <option value="$PROJECT_DIR$/src/Form/UserType.php" />
         <option value="$PROJECT_DIR$/templates/register/user.html.twig" />
-        <option value="$PROJECT_DIR$/templates/register/teacher.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/RegisterController.php" />
         <option value="$PROJECT_DIR$/templates/list/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/list/user.html.twig" />
@@ -88,6 +87,7 @@
         <option value="$PROJECT_DIR$/templates/register/department.html.twig" />
         <option value="$PROJECT_DIR$/templates/register/faculty.html.twig" />
         <option value="$PROJECT_DIR$/templates/register/school.html.twig" />
+        <option value="$PROJECT_DIR$/templates/register/teacher.html.twig" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1902" />
     <option name="height" value="913" />
@@ -278,12 +278,12 @@
       <workItem from="1563029748444" duration="19512000" />
       <workItem from="1563056470400" duration="2476000" />
       <workItem from="1563081617205" duration="1426000" />
-      <workItem from="1563087116724" duration="2507000" />
+      <workItem from="1563087116724" duration="2772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58814000" />
+    <option name="totallyTimeSpent" value="59079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1902" height="913" extended-state="1" />
@@ -654,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/register/teacher.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="615">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
         </state>
       </provider>
     </entry>
