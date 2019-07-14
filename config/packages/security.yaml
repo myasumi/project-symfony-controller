@@ -7,7 +7,7 @@ security:
     providers:
         in_database:
             entity:
-                class: App\Entity\User
+                class: App\Entity\Users
                 #to authenticate username
                 property: username
         in_memory: { memory: ~ }
@@ -17,6 +17,16 @@ security:
             security: false
         main:
             anonymous: true
+
+            provider: in_database
+
+            form_login:
+                login_path: security_login
+                check_path: security_login
+
+            logout:
+                path: security_logout
+                target: security_home
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
