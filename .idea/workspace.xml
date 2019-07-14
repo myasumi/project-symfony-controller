@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17dea92c-44b4-461e-a8de-4a90bed4ab25" name="Default Changelist" comment="" />
+    <list default="true" id="17dea92c-44b4-461e-a8de-4a90bed4ab25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/list/teacher.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list/teacher.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +33,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/list/school.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/list/teacher.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="615">
+              <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -69,8 +71,6 @@
         <option value="$PROJECT_DIR$/src/Controller/RegisterController.php" />
         <option value="$PROJECT_DIR$/templates/list/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/list/user.html.twig" />
-        <option value="$PROJECT_DIR$/templates/list/teacher.html.twig" />
-        <option value="$PROJECT_DIR$/templates/list/school.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/ListController.php" />
         <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/templates/home/home.html.twig" />
@@ -88,6 +88,8 @@
         <option value="$PROJECT_DIR$/templates/list/course.html.twig" />
         <option value="$PROJECT_DIR$/templates/list/department.html.twig" />
         <option value="$PROJECT_DIR$/templates/list/faculty.html.twig" />
+        <option value="$PROJECT_DIR$/templates/list/school.html.twig" />
+        <option value="$PROJECT_DIR$/templates/list/teacher.html.twig" />
       </list>
     </option>
   </component>
@@ -203,7 +205,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="27" />
     <option name="width" value="1902" />
     <option name="height" value="913" />
@@ -278,12 +280,12 @@
       <workItem from="1563029748444" duration="19512000" />
       <workItem from="1563056470400" duration="2476000" />
       <workItem from="1563081617205" duration="1426000" />
-      <workItem from="1563087116724" duration="3819000" />
+      <workItem from="1563087116724" duration="4074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60126000" />
+    <option name="totallyTimeSpent" value="60381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1902" height="913" extended-state="1" />
@@ -490,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list/teacher.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/list/user.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -654,8 +649,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/list/school.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="351">
+          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list/teacher.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
         </state>
       </provider>
     </entry>
