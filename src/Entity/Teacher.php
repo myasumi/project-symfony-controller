@@ -3,12 +3,18 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Teacher
  *
  * @ORM\Table(name="teacher", indexes={@ORM\Index(name="fk_teacher_users", columns={"users_id"}), @ORM\Index(name="fk_teacher_department", columns={"departament_id"})})
  * @ORM\Entity
+ * @UniqueEntity(
+ * fields= {"codigo"},
+ * message= "el docente que indicaste ya existe!"
+ * )
  */
 class Teacher
 {
@@ -23,21 +29,24 @@ class Teacher
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="condicion", type="string", length=255, nullable=false)
      */
     private $condicion;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="categoria", type="string", length=100, nullable=false)
      */
     private $categoria;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[0-9 ]+/", message="debe ingresar solamente caracteres que sean números.")
      * @ORM\Column(name="codigo", type="string", length=50, nullable=false)
      */
     private $codigo;
