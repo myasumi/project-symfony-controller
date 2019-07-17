@@ -112,5 +112,8 @@ class Faculty
         return $this;
     }
 
-
+    function __toString()
+    {
+        return $this->name;
+    }
 }
