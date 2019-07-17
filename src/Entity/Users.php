@@ -30,28 +30,33 @@ class Users implements UserInterface
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="surname", type="string", length=255, nullable=false)
      */
     private $surname;
 
     /**
      * @var string
-     *
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
+     * @Assert\Email(message="must have the following structure user@domain.com")
+     * @Assert\NotBlank()
      * @ORM\Column(name="username", type="string", length=150, nullable=false)
      */
     private $username;
 
     /**
      * @var string
-     *
+     * @Assert\Length(min=8, minMessage="la contraseña debe ser como minimo 8 caracteres")
+     * @Assert\NotBlank()
      * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
     private $password;
