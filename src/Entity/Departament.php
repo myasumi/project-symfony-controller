@@ -3,12 +3,18 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Departament
  *
  * @ORM\Table(name="departament", indexes={@ORM\Index(name="fk_department_faculty", columns={"faculty_id"})})
  * @ORM\Entity
+ * @UniqueEntity(
+ * fields= {"name"},
+ * message= "el departamento que indicaste ya existe!"
+ * )
  */
 class Departament
 {
@@ -23,28 +29,32 @@ class Departament
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="acronym", type="string", length=400, nullable=false)
      */
     private $acronym;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="vision", type="string", length=400, nullable=false)
      */
     private $vision;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/^[a-zA-Z ]+/", message="debe ingresar solamente caracteres de texto.")
      * @ORM\Column(name="mission", type="string", length=400, nullable=false)
      */
     private $mission;
@@ -124,5 +134,8 @@ class Departament
         return $this;
     }
 
-
+    function __toString()
+    {
+        return $this->name;
+    }
 }
