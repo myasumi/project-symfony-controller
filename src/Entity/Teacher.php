@@ -136,5 +136,8 @@ class Teacher
         return $this;
     }
 
-
+    function __toString()
+    {
+        return $this->codigo;
+    }
 }
