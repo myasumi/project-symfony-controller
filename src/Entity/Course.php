@@ -3,12 +3,18 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Course
  *
  * @ORM\Table(name="course", indexes={@ORM\Index(name="fk_course_school", columns={"school_id"})})
  * @ORM\Entity
+ * @UniqueEntity(
+ * fields= {"codigo"},
+ * message= "el curso que indicaste ya existe!"
+ * )
  */
 class Course
 {
@@ -23,21 +29,24 @@ class Course
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/[A-Z]\d{1,9}/i")
      * @ORM\Column(name="codigo", type="string", length=150, nullable=false)
      */
     private $codigo;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex("/[a-zA-Z ]+/")
      * @ORM\Column(name="name", type="string", length=150, nullable=false)
      */
     private $name;
 
     /**
      * @var int
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern ="/[1-9 ]+/", message="numbers [1-5]")
      * @ORM\Column(name="credits", type="integer", nullable=false)
      */
     private $credits;
@@ -105,5 +114,9 @@ class Course
         return $this;
     }
 
+    function __toString()
+    {
+        return $this->name;
+    }
 
 }
