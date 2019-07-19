@@ -18,6 +18,7 @@ class ListController extends AbstractController
      */
     public function actionListUser()
     {
+        //Esta funcion realiza el listado de todos los usuarios
         $user_repo = $this->getDoctrine()->getRepository(Users::class);
         $user = $user_repo->findAll();
         return $this->render('list/user.html.twig', [
@@ -30,6 +31,7 @@ class ListController extends AbstractController
      */
     public function actionListFaculty()
     {
+        //Esta funcion realiza el listado de todos los facultades
         $faculty_repo = $this->getDoctrine()->getRepository(Faculty::class);
         $faculty = $faculty_repo->findAll();
         return $this->render('list/faculty.html.twig', [
@@ -42,6 +44,7 @@ class ListController extends AbstractController
      */
     public function toListSchool()
     {
+        //Esta funcion realiza el listado de todos los escuelas profecionales
         $school_repo = $this->getDoctrine()->getRepository(School::class);
         $school = $school_repo->findAll();
         return $this->render('list/school.html.twig', [
@@ -54,6 +57,7 @@ class ListController extends AbstractController
      */
     public function actionListDepartment()
     {
+        //Esta funcion realiza el listado de todos los departamento academico
         $department_repo = $this->getDoctrine()->getRepository(Departament::class);
         $department = $department_repo->findAll();
         return $this->render('list/department.html.twig', [
@@ -66,6 +70,7 @@ class ListController extends AbstractController
      */
     public function actionListTeacher()
     {
+        //Esta funcion realiza el listado de todos los docentes
         $teacher_repo = $this->getDoctrine()->getRepository(Teacher::class);
         $teacher = $teacher_repo->findAll();
         return $this->render('list/teacher.html.twig', [
@@ -78,6 +83,7 @@ class ListController extends AbstractController
      */
     public function actionListCourse()
     {
+        //Esta funcion realiza el listado de todos los cursos
         $course_repo = $this->getDoctrine()->getRepository(Course::class);
         $course = $course_repo->findAll();
         return $this->render('list/course.html.twig', [
