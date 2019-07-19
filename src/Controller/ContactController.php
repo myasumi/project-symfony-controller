@@ -18,6 +18,7 @@ class ContactController extends AbstractController
      */
     public function actionFormContact(Request $request, ObjectManager $manager, MailerInterface $mailer)
     {
+        //En esta parte la funcion esta realizando la creacion del formulario [contacto]
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
