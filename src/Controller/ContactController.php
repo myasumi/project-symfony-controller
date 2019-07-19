@@ -40,4 +40,7 @@ class ContactController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    //crear la funcion de enviar una notificacion de docente al administrador de igual manera de alumno al administracion
+    
 }
