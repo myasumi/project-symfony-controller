@@ -43,4 +43,13 @@ class ContactController extends AbstractController
 
     //crear la funcion de enviar una notificacion de docente al administrador de igual manera de alumno al administracion
     
+    //hola 
+
+
+
+
+
+
+
+
 }
