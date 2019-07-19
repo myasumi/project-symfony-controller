@@ -13,6 +13,7 @@ class SecurityController extends AbstractController
      */
     public function actionLogin(AuthenticationUtils $authentication)
     {
+        //Realizamos la autenticacion del acceso al sistema con la funcion actionLogin
         $error = $authentication->getLastAuthenticationError();
         $username = $authentication->getLastUsername();
         return $this->render('security/login.html.twig', [
