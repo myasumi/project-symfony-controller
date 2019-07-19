@@ -13,6 +13,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class DepartmentType extends AbstractType
 {
+    //Realizamos el formulario de departamento academico
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
