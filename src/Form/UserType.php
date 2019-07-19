@@ -14,6 +14,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class UserType extends AbstractType
 {
+    //Realizamos el formulario de usuarios
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
