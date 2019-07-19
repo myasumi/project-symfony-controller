@@ -27,6 +27,7 @@ class RegisterController extends AbstractController
      */
     public function actionFormRegisterFaculty(Request $request, ObjectManager $manager)
     {
+        //Esta funcion realiza el registro de todas las facultades
         $faculty = new Faculty();
         $form = $this->createForm(FacultyType::class, $faculty);
         $form->handleRequest( $request);
@@ -45,6 +46,7 @@ class RegisterController extends AbstractController
      */
     public function actionFormRegisterUser(Request $request, ObjectManager $manager, UserPasswordEncoderInterface $encoder)
     {
+        //Esta funcion realiza el registro de todas los usuarios
         $user = new Users();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest( $request);
@@ -65,6 +67,7 @@ class RegisterController extends AbstractController
      */
     public function actionFormRegisterSchool(Request $request, ObjectManager $manager)
     {
+        //Esta funcion realiza el registro de todas los escuela profecional
         $school = new School();
         $form = $this->createForm(SchoolType::class, $school);
         $form->handleRequest( $request);
@@ -83,6 +86,7 @@ class RegisterController extends AbstractController
      */
     public function actionFormRegisterDepartment(Request $request, ObjectManager $manager)
     {
+        //Esta funcion realiza el registro de todas los departamentos academicos
         $department = new Departament();
         $form = $this->createForm(DepartmentType::class, $department);
         $form->handleRequest( $request);
@@ -101,6 +105,7 @@ class RegisterController extends AbstractController
      */
     public function registerTeacher(Request $request, ObjectManager $manager)
     {
+        //Esta funcion realiza el registro de todas los docentes
         $teacher = new Teacher();
         $form = $this->createForm(TeacherType::class, $teacher);
         $form->handleRequest( $request);
@@ -119,6 +124,7 @@ class RegisterController extends AbstractController
      */
     public function actionFormRegisterCourse(Request $request, ObjectManager $manager)
     {
+        //Esta funcion realiza el registro de todas los cursos
         $course = new Course();
         $form = $this->createForm(CourseType::class, $course);
         $form->handleRequest( $request);
