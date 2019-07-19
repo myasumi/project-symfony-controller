@@ -2,5 +2,5 @@ projectKey=andia
 serverUrl=http://localhost:9000
 serverVersion=7.4.0.18908
 dashboardUrl=http://localhost:9000/dashboard?id=andia
-ceTaskId=AWwI4ZbYukKsufli_q5u
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWwI4ZbYukKsufli_q5u
+ceTaskId=AWwJFmhTukKsufli_q5v
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWwJFmhTukKsufli_q5v
