@@ -12,6 +12,7 @@ class HomeController extends AbstractController
      */
     public function index()
     {
+        //Esta el controlador de la vista pricipal del proyecto
         return $this->render('home/home.html.twig');
     }
 }
