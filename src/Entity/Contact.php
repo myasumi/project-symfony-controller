@@ -11,7 +11,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
  * @ORM\Table(name="contact")
  * @ORM\Entity
- * @UniqueEntity("email", message="Ya existe el contacto ingrese nuevo contacto")
  */
 class Contact
 {
