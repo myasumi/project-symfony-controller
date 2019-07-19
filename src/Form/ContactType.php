@@ -11,6 +11,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ContactType extends AbstractType
 {
+    //Realizamos el formulario de contacto 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
