@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Contact
@@ -18,6 +17,7 @@ class Contact
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
+     * 
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
